@@ -1,15 +1,3 @@
-<style>
-  .transparent-text {
-    background-color: transparent;
-    color: transparent;
-    
-  }
-</style>
-</head>
-<body>
-  <p class="transparent-text">&copy; 2023 ShowLowfinity Harvester - All rights reserved.</p>
-</body>
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -34,9 +22,35 @@
     #player {
       width: 300px;
     }
+
+    .menu-bar {
+      background-color: #ccc;
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      padding: 10px;
+    }
+
+    .menu-bar img {
+      width: 50px;
+      margin-right: 20px;
+    }
+
+    .menu-item {
+      margin-right: 20px;
+      cursor: pointer;
+    }
   </style>
 </head>
 <body>
+  <div class="menu-bar">
+    <img src="WSLF.png" alt="Logo">
+    <div class="menu-item" onclick="window.location.href='about.html'">About</div>
+    <div class="menu-item" onclick="window.location.href='https://showlowfinityharvester.github.io/wslfradio.github.io/'">🎵 WSLF</div>
+    <div class="menu-item" onclick="window.location.href='https://showlowfinityharvester.github.io/kec94.github.io/'">⛅ KEC94</div>
+    <div class="menu-item" onclick="window.location.href='https://showlowfinityharvester.github.io/wwg41.github.io/'">⛅ WWG41</div>
+  </div>
+
   <div id="player-container">
     <audio id="player" controls>
       Your browser does not support the audio element.
@@ -44,7 +58,7 @@
   </div>
 
   <script>
-    const m3uPlaylistUrl = "KEC94.m3u"; 
+    const m3uPlaylistUrl = "WSLF.m3u"; 
 
     const audioPlayer = document.getElementById("player");
 
